@@ -1,0 +1,19 @@
+name: telegram message
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: send custom message with args
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: |  
+          Push New Commit : Basic Flutter
+          ---
+          Author : ${{ github.actor }}
+          Message : ${{ github.event.head_commit.message }}
