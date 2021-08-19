@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:startwithgetx/route/app_route.dart';
+import 'package:startwithgetx/translate/my_lang.dart';
 import 'package:startwithgetx/view/home_page_view.dart';
 import 'package:startwithgetx/view/my_cart.dart';
 import 'package:startwithgetx/view/product.dart';
@@ -30,6 +31,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: AppRoute.InitializeRoute,
       getPages: AppRoute.getRoute,
+      translations: Mylang(),
+      locale: Locale('km',"KH"),
     );
   }
 }

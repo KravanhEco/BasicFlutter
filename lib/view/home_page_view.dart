@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:startwithgetx/controller/cart_controller.dart';
 import 'package:startwithgetx/controller/home_controller.dart';
-import 'package:startwithgetx/route/app_route_name.dart';
-import 'package:startwithgetx/view/my_cart.dart';
+import 'package:startwithgetx/controller/product_controller.dart';
 
 class ViewHomePage extends StatelessWidget {
-  final ctl = Get.put(HomeController());
+//  final ctl = Get.put(HomeController());
+//  final proCtl = Get.put(ProductController());
+//  final cartCtl = Get.put(CartController());
+
+    final ctl =Get.find<HomeController>();
+    final proCtl =Get.find<ProductController>();
+    final cartCtl =Get.find<CartController>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,9 +34,20 @@ class ViewHomePage extends StatelessWidget {
             TextField(
               controller: ctl.txtController,
             ),
-            TextButton(child: Text('Submit'),onPressed: (){
+            TextButton(child: Text('hello'.tr),onPressed: (){
               ctl.gotoMyCart();
             },),
+
+            TextButton(onPressed: (){
+              if(Get.deviceLocale!.languageCode == 'en'){
+                Get.updateLocale(Locale('km','KH'));
+                print('kh');
+              }else{
+                Get.updateLocale(Locale('en','US'));
+                print('en');
+              }
+
+            }, child: Text('click me'))
           ],
         ),
       )),

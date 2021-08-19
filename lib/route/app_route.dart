@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:startwithgetx/controller/HomeBinding.dart';
 import 'package:startwithgetx/route/app_route_name.dart';
 import 'package:startwithgetx/view/home_page_view.dart';
 import 'package:startwithgetx/view/my_cart.dart';
@@ -13,6 +14,6 @@ class AppRoute{
     GetPage(name: RouteName.SPLASH_SCREEN, page: () => SpashScreen()),
     GetPage(name: RouteName.MY_CART, page: () => MyCart()),
     GetPage(name: RouteName.MY_PRODUCT, page: () => MyProduct()),
-    GetPage(name: RouteName.HOME, page: () => ViewHomePage()),
+    GetPage(name: RouteName.HOME, page: () => ViewHomePage(),binding: HomeBinding()),
   ];
 }

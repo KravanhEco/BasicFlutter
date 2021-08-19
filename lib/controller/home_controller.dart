@@ -13,7 +13,6 @@ class HomeController extends GetxController{
 
   void increase(){
     counter ++;
-
   }
 
   void decrease(){
