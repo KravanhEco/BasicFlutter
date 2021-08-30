@@ -5,6 +5,7 @@ import 'package:startwithgetx/view/home_page_view.dart';
 import 'package:startwithgetx/view/my_cart.dart';
 import 'package:startwithgetx/view/product.dart';
 import 'package:startwithgetx/view/splash_screen.dart';
+import 'package:startwithgetx/view/task_screen.dart';
 
 class AppRoute{
 
@@ -15,5 +16,6 @@ class AppRoute{
     GetPage(name: RouteName.MY_CART, page: () => MyCart()),
     GetPage(name: RouteName.MY_PRODUCT, page: () => MyProduct()),
     GetPage(name: RouteName.HOME, page: () => ViewHomePage(),binding: HomeBinding()),
+    GetPage(name: RouteName.TASK, page: () => TaskScreen()),
   ];
 }

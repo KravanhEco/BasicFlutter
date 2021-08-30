@@ -12,7 +12,7 @@ class _SpashScreenState extends State<SpashScreen> {
 
   void startTime() async{
     await Future.delayed(Duration(seconds: 2));
-    Get.offNamed(RouteName.HOME);
+    Get.offNamed(RouteName.TASK);
   }
 
 @override
